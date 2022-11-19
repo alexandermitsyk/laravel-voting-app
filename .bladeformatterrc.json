@@ -1,0 +1,7 @@
+{
+    "[blade]": {
+        "editor.defaultFormatter": "shufo.vscode-blade-formatter"
+    },
+    "blade.format.enable": true,
+    "bladeFormatter.format.wrapAttributes": "force-expand-multiline"
+}
