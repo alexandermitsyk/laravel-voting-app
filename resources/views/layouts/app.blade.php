@@ -48,7 +48,6 @@
             </a>
         </div>
     </header>
-
     <main class="container mx-auto flex max-w-custom">
         <div class="w-70 mr-5">
             <div class="border-2 border-gray-100 rounded-xl mt-16 bg-white">

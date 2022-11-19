@@ -48,3 +48,7 @@
     background: theme("colors.purple");
     opacity: 1;
 }
+
+[x-cloak] {
+    display: none !important;
+}
