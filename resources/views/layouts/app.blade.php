@@ -13,12 +13,13 @@
 
     <!-- Scripts -->
     @vite(['resources/css/app.css', 'resources/js/app.js'])
+    @livewireStyles
 </head>
 
 <body class="font-sans bg-gray-background text-gray-900 text-sm">
-    <header class="flex items-center justify-between px-8 py-4">
+    <header class="flex flex-col md:flex-row items-center justify-between px-8 py-4">
         <a href="#" class=""><img src="{{ asset('img/logo.svg') }}" /></a>
-        <div class="flex items-center">
+        <div class="flex items-center mt-2 md:mt-0">
             @if (Route::has('login'))
                 <div class="px-6 py-4">
                     @auth
@@ -48,9 +49,9 @@
             </a>
         </div>
     </header>
-    <main class="container mx-auto flex max-w-custom">
-        <div class="w-70 mr-5">
-            <div class="border-2 border-gray-100 rounded-xl mt-16 bg-white">
+    <main class="container mx-auto flex max-w-custom flex-col md:flex-row">
+        <div class=" md:w-70 md:mr-5 mx-2 md:mx-0">
+            <div class="border-2 border-gray-100 rounded-xl md:mt-16 mt-2 bg-white md:sticky md:top-8">
                 <div class="text-center px-4 py-2 pt-6">
                     <h3 class="font-semibold text-base">Add an idea</h3>
                     <p class="text-xs mt-4">
@@ -99,8 +100,8 @@
                 </div>
             </div>
         </div>
-        <div class="w-175">
-            <nav class="flex items-center justify-between text-xs">
+        <div class="w-full md:w-175 px-2 md:px-0">
+            <nav class="items-center justify-between text-xs hidden md:flex">
                 <ul class="flex uppercase font-semibold space-x-10 border-b-4 pb-3">
                     <li><a href="" class="border-b-4 pb-3 font-bold border-blue">All ideas (87)</a></li>
                     <li><a href=""
@@ -125,6 +126,7 @@
             </div>
         </div>
     </main>
+    @livewireScripts
 </body>
 
 </html>
