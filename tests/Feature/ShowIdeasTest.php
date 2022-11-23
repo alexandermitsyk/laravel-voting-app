@@ -80,23 +80,23 @@ class ShowIdeasTest extends TestCase
 
     public function same_idea_title_different_slugs() {
         $ideaOne = Idea::factory()->create([
-            'title' => 'My first idea',
+            'title' => 'My First Idea',
             'description' => 'Description of my first idea'
         ]);
 
         $ideaTwo = Idea::factory()->create([
-            'title' => 'My first idea',
+            'title' => 'My First Idea',
             'description' => 'Another description of my first idea'
         ]);
 
         $response = $this->get(route('idea.show', $ideaOne));
-        $response->assertSuccessful();
 
+        $response->assertSuccessful();
         $this->assertTrue(request()->path() == 'ideas/my-first-idea');
 
         $response = $this->get(route('idea.show', $ideaTwo));
-        $response->assertSuccessful();
 
-        $this->assertTrue(request()->path() == 'ideas/my-first-idea-1');
+        $response->assertSuccessful();
+        $this->assertTrue(request()->path() == 'ideas/my-first-idea-2');
     }
 }
